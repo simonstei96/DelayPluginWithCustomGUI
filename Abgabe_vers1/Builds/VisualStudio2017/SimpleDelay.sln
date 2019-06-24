@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2017
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleDelay - Standalone Plugin", "SimpleDelay_StandalonePlugin.vcxproj", "{733A5D52-5C21-D49F-6237-2550E787835F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{75AB28B1-2205-9264-6044-47611A217680} = {75AB28B1-2205-9264-6044-47611A217680}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleDelay - VST", "SimpleDelay_VST.vcxproj", "{174AF617-D1D8-A4B8-622F-D8F0498BE287}"
+	ProjectSection(ProjectDependencies) = postProject
+		{75AB28B1-2205-9264-6044-47611A217680} = {75AB28B1-2205-9264-6044-47611A217680}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleDelay - Shared Code", "SimpleDelay_SharedCode.vcxproj", "{75AB28B1-2205-9264-6044-47611A217680}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{174AF617-D1D8-A4B8-622F-D8F0498BE287}.Debug|Win32.ActiveCfg = Debug|Win32
+		{174AF617-D1D8-A4B8-622F-D8F0498BE287}.Debug|Win32.Build.0 = Debug|Win32
+		{174AF617-D1D8-A4B8-622F-D8F0498BE287}.Release|Win32.ActiveCfg = Release|Win32
+		{174AF617-D1D8-A4B8-622F-D8F0498BE287}.Release|Win32.Build.0 = Release|Win32
+		{733A5D52-5C21-D49F-6237-2550E787835F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{733A5D52-5C21-D49F-6237-2550E787835F}.Debug|Win32.Build.0 = Debug|Win32
+		{733A5D52-5C21-D49F-6237-2550E787835F}.Release|Win32.ActiveCfg = Release|Win32
+		{733A5D52-5C21-D49F-6237-2550E787835F}.Release|Win32.Build.0 = Release|Win32
+		{75AB28B1-2205-9264-6044-47611A217680}.Debug|Win32.ActiveCfg = Debug|Win32
+		{75AB28B1-2205-9264-6044-47611A217680}.Debug|Win32.Build.0 = Debug|Win32
+		{75AB28B1-2205-9264-6044-47611A217680}.Release|Win32.ActiveCfg = Release|Win32
+		{75AB28B1-2205-9264-6044-47611A217680}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

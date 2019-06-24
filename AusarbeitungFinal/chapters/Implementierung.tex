@@ -1,0 +1,48 @@
+\chapter{Implementierung}
+
+%Codebrocken erklären
+
+
+\section{Delay Processing}
+
+Das wichtigste in der digitalen Signalverarbeitung ist die Methode \textit{processBlock()}. In dieser Methode findet die ganze Signalbearbeitung statt. Im AudioBuffer Objekt stehen die aktuellen Eingangsamples. Diese werden immer blockweise geladen. Dieser AudioBuffer ist zeitgleich auch der Ausgangsbuffer.
+
+Der Nachfolgende Code ist des Herzstück des Delay Plugins. Hier werden die aktuellen Samples in den Delaybuffer des Objekts \textit{d} gespeichert. Dann wird in ein AudioBuffer-Objekt die vergangenen Samples aus dem Delaybuffer kopiert. Die darin enthaltenen Samples werden mit einer gewissen Lautstärke (Feedbackwert) zu den vorhandenen Samples in dem Delaybuffer aufaddiert (nicht ersetzt!) aber an der selben Stelle wie vorher die Eingangssamples gespeichert wurden. Alle vergangen Samples erhalten noch eine gewisse Lautstärke (Mixwert). Am Ende werden die vergangenen Samples im AudioBuffer-Objekt zu den Eingangssamples aufaddiert.
+
+\begin{lstlisting}[language=C++, caption=Ausschnitt aus processBlock()]
+for (int channel = 0; channel < totalNumInputChannels; ++channel)
+{
+float* inputData = buffer.getWritePointer (channel);
+
+d.setBufferData(channel, inputNumSamples, inputData);
+
+float delayTimeVal = *parameters->getRawParameterValue("timeID");
+
+d.getBufferData(channel, inputNumSamples,delayTimeVal, delayedSignal);
+
+float feedbackVal = *parameters->getRawParameterValue("feedbackID");
+
+d.addFeedbackData(channel, inputNumSamples,
+	feedbackVal/100.0f, delayedSignal.getReadPointer(channel));
+
+float mixVal = *parameters->getRawParameterValue("mixID");
+delayedSignal.applyGain(mixVal/100.0f);
+
+buffer.addFrom(channel, 0, delayedSignal, channel, 0, inputNumSamples);
+
+}
+\end{lstlisting}
+
+Nach der Schleife ist es nur wichtig mit der Methode \textit{updateBufferPos()} aufzurufen um die Schreibposition zu verschieben.
+
+Alle Operationen die auf dem Delaybuffer (Kreisspeicher) arbeiten befinden sich im Delay-Objekt. Jede diese Operationen verschiebt aber nicht die Samples einzeln in den Delaybuffer sondern mit Hilfe von Vektorfunktionen. Andernfalls wird die Laufzeit möglicherweise beeinflusst und zwar auf die schlechte Art.
+
+Das einzige Problem an dieser Implementierung ist, wenn die Delaytime geändert wird, entstehen Artefakte. Dies kommt daher, dass sich die Position zum lesen der vergangenen Samples geändert hat. Damit entsteht zwischen dem alten und  neuen Wert ein zu großer Unterschied den der Lautsprecher nicht natürlich wiedergeben kann. Daraus folgt ein Knackgeräusch. Dies könnte mit Hilfe von Interpolation entfernt werden.
+
+\section{ControlPane}
+
+Die ControlPane-Klasse war als langfristige Erweiterung geplant. Diese könnte zum Beispiel für eine Implementierung eines Filters mit Resonanz genutzt werden. Dafür wurden Vorkehrungen bei der Implementierung von Methoden gewählt.
+
+Die Wertebereichslimits können auch so gesetzt werden, dass der Minimalwert negativ sein kann. Die Methoden zur Umrechnung von Achspositionen zu Absolutwerten (\textit{convertAxisToValue()}) und umgekehrt von Absolutwert zu Achsenposition (\textit{convertValueToAxis()}) berechnen korrekte Werte egal ob der Anfangswert negativ ist. Solche Berechnungen, welche Werte von einem bestimmten Bereich auf einen anderen ableitet, sind ein persönlicher Favorit von mir. 
+
+Das der Trackball über das Feld hinausgehen kann wirkt auf den User besser. Könnte der Trackball sich nicht hinaus bewegen, so wirkt der Trackball nicht als rundes Objekt sondern eher als Quadrat. Damit bleibt die Illusion erhalten das es wirklich ein rundes Objekt ist. Zu dem wirkt es schöner wenn der Mittelpunkt des Trackballs an der Mausklick Position ist.

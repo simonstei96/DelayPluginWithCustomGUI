@@ -1,0 +1,33 @@
+\chapter{Bedienungsanleitung}
+
+%Optional, je nachdem wie sich Ausarbeitung entwickelt
+
+Es lassen sich Delaytime (Zeit, die verstreicht in Millisekunden bis das Signal wiederholt wird), Feedback (Lautstärkewert, mit der das wiederholte Signal wieder in den Delaybuffer eingespeist wird) und das Mischverhältnis im Output zwischen Inputsignal und dem Signal aus dem Delaybuffer.
+
+Ist das Mischverhältnis auf 0 Prozent, so wird nur das Eingangssignal ausgegeben. Je höher das Mischverhältnis des mehr wird von dem verzögerten Signal gehört. Bei 100 Prozent ist Eingangssignal und das verzögerte Signal gleich laut.
+
+Das Verschiebung des Trackballs auf der x-Achse verändert die Zeit bis das Signal wiederholt wird. Mit diesem Plugin ist eine Zeit zwischen 100ms und 1000ms möglich.
+
+Das Verschieben des Trackballs auf der y-Achse verändert die Lautstärke des wiederholenden Signals. Es ist nicht möglich den Wert auf 100 zu setzen, da das Signal sonst ewig wiederholt wird.
+
+Im Ordner \textit{Audio} liegen 3 Beispiele. Eines ohne Delay, eines mit einem 500ms Delay und das selbe noch einmal nur mit Feedback.
+
+Im Ordner \textit{Dateien} liegen eine eigenständige Anwendung und eine .dll zur Verwendung in DAWs.
+
+
+\section{Plugin}
+
+Um das erstellte Plugin in einer DAW zu verwenden:
+
+\begin{itemize}
+	\item Projekt erstellen. Damit wird eine .dll erzeugt
+	\item Aus ../Projektordner/Builds/VisualStudio2017/Win32/Debug/VST die Datei mit der Endung \textit{.dll} in den VSTPlugin Ordner der DAW ziehen und neu scannen lassen
+	\item Sollte es dort nicht gefunden werden, kann die Bit-Architektur des DAW/Plugin ungleich sein. Lösung: Plugin mit einer anderen Architektur erstellen
+	\item Plugin nach einem digitalem Instrument platzieren und an den Reglern die Werte verändern
+\end{itemize}
+
+\section{Standalone}
+
+Achtung: Bei Verwendung einer Lautsprecheranlage kann es zu Rückkopplungen kommen.
+
+Die eigenständige Datei (.exe) starten. Es können möglicherweise Dateien (.dll) fehlen um die Datei auszuführen. Nach Installation der fehlenden Datei sollte auch die Standalone Variante funktionieren. 

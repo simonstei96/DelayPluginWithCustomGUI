@@ -1,0 +1,52 @@
+﻿  ControlPane.cpp
+  Delay.cpp
+  PluginProcessor.cpp
+  PluginEditor.cpp
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\controlpane.h(22): warning C4584: "ControlPane": Basisklasse "juce::MouseListener" ist bereits eine Basisklasse von "juce::Component" (Quelldatei wird kompiliert ..\..\Source\PluginProcessor.cpp)
+  c:\juce\modules\juce_gui_basics\mouse\juce_mouselistener.h(40): note: Siehe Deklaration von "juce::MouseListener" (Quelldatei wird kompiliert ..\..\Source\PluginProcessor.cpp)
+  c:\juce\modules\juce_gui_basics\components\juce_component.h(36): note: Siehe Deklaration von "juce::Component" (Quelldatei wird kompiliert ..\..\Source\PluginProcessor.cpp)
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\plugineditor.h(21): warning C4584: "SimpleDelayAudioProcessorEditor": Basisklasse "juce::MouseListener" ist bereits eine Basisklasse von "juce::AudioProcessorEditor" (Quelldatei wird kompiliert ..\..\Source\PluginProcessor.cpp)
+  c:\juce\modules\juce_gui_basics\mouse\juce_mouselistener.h(40): note: Siehe Deklaration von "juce::MouseListener" (Quelldatei wird kompiliert ..\..\Source\PluginProcessor.cpp)
+  c:\juce\modules\juce_audio_processors\processors\juce_audioprocessoreditor.h(44): note: Siehe Deklaration von "juce::AudioProcessorEditor" (Quelldatei wird kompiliert ..\..\Source\PluginProcessor.cpp)
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\controlpane.h(22): warning C4584: "ControlPane": Basisklasse "juce::MouseListener" ist bereits eine Basisklasse von "juce::Component" (Quelldatei wird kompiliert ..\..\Source\PluginEditor.cpp)
+  c:\juce\modules\juce_gui_basics\mouse\juce_mouselistener.h(40): note: Siehe Deklaration von "juce::MouseListener" (Quelldatei wird kompiliert ..\..\Source\PluginEditor.cpp)
+  c:\juce\modules\juce_gui_basics\components\juce_component.h(36): note: Siehe Deklaration von "juce::Component" (Quelldatei wird kompiliert ..\..\Source\PluginEditor.cpp)
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\plugineditor.h(21): warning C4584: "SimpleDelayAudioProcessorEditor": Basisklasse "juce::MouseListener" ist bereits eine Basisklasse von "juce::AudioProcessorEditor" (Quelldatei wird kompiliert ..\..\Source\PluginEditor.cpp)
+  c:\juce\modules\juce_gui_basics\mouse\juce_mouselistener.h(40): note: Siehe Deklaration von "juce::MouseListener" (Quelldatei wird kompiliert ..\..\Source\PluginEditor.cpp)
+  c:\juce\modules\juce_audio_processors\processors\juce_audioprocessoreditor.h(44): note: Siehe Deklaration von "juce::AudioProcessorEditor" (Quelldatei wird kompiliert ..\..\Source\PluginEditor.cpp)
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\pluginprocessor.cpp(89): warning C4100: "index": Unreferenzierter formaler Parameter
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\pluginprocessor.cpp(93): warning C4100: "index": Unreferenzierter formaler Parameter
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\pluginprocessor.cpp(98): warning C4100: "newName": Unreferenzierter formaler Parameter
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\pluginprocessor.cpp(98): warning C4100: "index": Unreferenzierter formaler Parameter
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\pluginprocessor.cpp(106): warning C4244: "Argument": Konvertierung von "double" in "int", möglicher Datenverlust
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\plugineditor.cpp(75): warning C4244: "Initialisierung": Konvertierung von "double" in "int", möglicher Datenverlust
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\pluginprocessor.cpp(103): warning C4100: "samplesPerBlock": Unreferenzierter formaler Parameter
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\plugineditor.cpp(105): warning C4100: "event": Unreferenzierter formaler Parameter
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\pluginprocessor.cpp(143): warning C4100: "midiMessages": Unreferenzierter formaler Parameter
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\delay.cpp(39): warning C4244: "Initialisierung": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\controlpane.h(22): warning C4584: "ControlPane": Basisklasse "juce::MouseListener" ist bereits eine Basisklasse von "juce::Component" (Quelldatei wird kompiliert ..\..\Source\ControlPane.cpp)
+  c:\juce\modules\juce_gui_basics\mouse\juce_mouselistener.h(40): note: Siehe Deklaration von "juce::MouseListener" (Quelldatei wird kompiliert ..\..\Source\ControlPane.cpp)
+  c:\juce\modules\juce_gui_basics\components\juce_component.h(36): note: Siehe Deklaration von "juce::Component" (Quelldatei wird kompiliert ..\..\Source\ControlPane.cpp)
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\controlpane.cpp(84): warning C4305: "Argument": Verkürzung von "double" in "float"
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\controlpane.cpp(91): warning C4244: "Argument": Konvertierung von "int" in "float", möglicher Datenverlust
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\controlpane.cpp(179): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\controlpane.cpp(185): warning C4244: "=": Konvertierung von "int" in "float", möglicher Datenverlust
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\controlpane.cpp(186): warning C4244: "=": Konvertierung von "int" in "float", möglicher Datenverlust
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\controlpane.cpp(206): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\controlpane.cpp(208): warning C4244: "Argument": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\controlpane.cpp(212): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
+c:\users\simon\documents\hochschule\t u. p\juce\abgabe_vers1\source\controlpane.cpp(214): warning C4244: "Argument": Konvertierung von "float" in "int", möglicher Datenverlust
+  BinaryData.cpp
+  include_juce_audio_basics.cpp
+  include_juce_audio_devices.cpp
+  include_juce_audio_formats.cpp
+  include_juce_audio_plugin_client_utils.cpp
+  include_juce_audio_processors.cpp
+  include_juce_audio_utils.cpp
+  include_juce_core.cpp
+  include_juce_data_structures.cpp
+  include_juce_events.cpp
+  include_juce_graphics.cpp
+  include_juce_gui_basics.cpp
+  include_juce_gui_extra.cpp
+  SimpleDelay_SharedCode.vcxproj -> C:\Users\Simon\Documents\Hochschule\T u. P\Juce\Abgabe_vers1\Builds\VisualStudio2017\Win32\Debug\Shared Code\SimpleDelay.lib

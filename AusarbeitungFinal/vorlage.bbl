@@ -1,0 +1,16 @@
+\begin{thebibliography}{HTC19}
+
+\bibitem[HTC19]{HTC}
+{\em {HowtoCreateDelay-basedAudioEffectsontheTMS320C672xDSP}}, 28.2.2019.
+\newblock \\ {\url{http://www.ti.com/lit/an/spraaa5/spraaa5.pdf}}.
+
+\bibitem[JUC19]{JUCE}
+{\em {JUCE}}, 28.2.2019.
+\newblock \\ {\url{https://en.wikipedia.org/wiki/JUCE}}.
+
+\bibitem[PF19]{PF}
+{\em {Plugin Formats Explained}}, 28.2.2019.
+\newblock \\
+  {\url{http://support.pluginboutique.com/knowledgebase/articles/51119-plugin-formats-explained-vst-au-aax-etc}}.
+
+\end{thebibliography}
